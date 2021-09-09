@@ -19,6 +19,7 @@ No final da execução é gerado um arquivo .csv com a relação do tempo de cad
 
 ## Especificação da maquina de testes
 Neste projeto foi usada uma maquina virtual hospedada no serviço Google Cloud com as seguintes configurações.
+
     Processador: 4 vCPUs Intel(R) Xeon(R) CPU @ 2.20GHz
     Memória: 32GB
     SO: Ubuntu #56~18.04.1 x86_64, GNU/Linux
