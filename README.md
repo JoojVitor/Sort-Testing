@@ -1,7 +1,7 @@
 # Teste de tempo de execução em algoritmos de ordenação
 Este trabalho visa analisar o tempo de execução de cada método de ordenação, considerando o melhor e pior caso e um caso aleatório.
 
-## Algoritmos:
+## Algoritmos
 - InsertSort
 - SelectSort
 - BubbleSort
