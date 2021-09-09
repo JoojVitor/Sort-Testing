@@ -171,7 +171,6 @@ void Merge(int *v, int Pi, int Pf, int M)
         }
         else
         {
-            cout<< v[j];
             vet[k] = v[j];
             j++;
         }
