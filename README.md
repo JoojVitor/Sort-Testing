@@ -18,7 +18,7 @@ Inicialmente são gerados vetores de capacidades 10, 100, 1000, 10000, 100000, 1
 No final da execução é gerado um arquivo .csv com a relação do tempo de cada método de ordenação, o caso e a quantidade de valores.
 
 ## Especificação da maquina de testes
-Neste projeto foi usada uma maquina virtual hospedada no serviço Google Cloud com as seguintes configurações.
+Neste projeto foi usada uma maquina virtual hospedada no serviço Google Cloud com as seguintes configurações:
 
     Processador: 4 vCPUs Intel(R) Xeon(R) CPU @ 2.20GHz
     Memória: 32GB
