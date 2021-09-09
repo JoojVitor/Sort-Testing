@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ed2_ordenacao.dir/main.cpp.o -o ed2_ordenacao 

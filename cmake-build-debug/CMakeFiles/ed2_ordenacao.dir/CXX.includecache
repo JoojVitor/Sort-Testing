@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/main.cpp
+iostream
+-
+string
+-
+random
+-
+fstream
+-
+time.h
+-
+iomanip
+-
+

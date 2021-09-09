@@ -1,0 +1,3 @@
+/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles/ed2_ordenacao.dir
