@@ -819,7 +819,7 @@ result[12] = "---------;---------;---------;---------;---------";
     cout << endl << endl << "------------Testando mergeSort para randon ------------" << endl << endl;
     result[15] = TestTime("mergeSort", "randon");
 
-result[16] = "---------;---------;---------;---------;---------";
+    result[16] = "---------;---------;---------;---------;---------";
 
     cout << endl << endl << "------------Testando quickSort para desc ------------" << endl << endl;
     result[17] = TestTime("quickSort", "desc");
@@ -828,7 +828,7 @@ result[16] = "---------;---------;---------;---------;---------";
     cout << endl << endl << "------------Testando quickSort para randon ------------" << endl << endl;
     result[19] = TestTime("quickSort", "randon");
 
-result[20] = "---------;---------;---------;---------;---------";
+    result[20] = "---------;---------;---------;---------;---------";
 
     cout << endl << endl << "------------Testando HeapSort para desc ------------" << endl << endl;
     result[21] = TestTime("heapSort", "desc");
@@ -837,7 +837,7 @@ result[20] = "---------;---------;---------;---------;---------";
     cout << endl << endl << "------------Testando HeapSort para randon ------------" << endl << endl;
     result[23] = TestTime("heapSort", "randon");
 
-result[24] = "---------;---------;---------;---------;---------";
+    result[24] = "---------;---------;---------;---------;---------";
 
 //    cout << endl << endl << "------------Testando countingSort_start para desc ------------" << endl << endl;
 //    result[25] = TestTime("countingSort_start", "desc");
