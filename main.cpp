@@ -1,85 +1,9 @@
 #include <iostream>
 #include <string>
-#include <random>
-#include <fstream>
 #include <time.h>
-#include <iomanip>
+#include "util/UtilidadesArquivo.h"
 
 using namespace std;
-
-//---------------------------Funçoes auxiliares---------------------------
-void SireVectorDesc(int *v, int n){
-    for(int i = 0; i < n; i++)
-    {
-        v[i] = n-i;
-    }
-}
-
-void SireVectorAsc(int *v, int n){
-    for(int i = 0; i < n; i++)
-    {
-        v[i] = i;
-    }
-}
-
-void SireVectorRoadom(int *v, int n){
-    const int low = 0;
-    const int high = n*100;
-
-    for (int i=0; i < n; ++i) {
-
-        v[i] = rand() % ( high - low + 1 ) + low;
-    }
-}
-
-void WriteVetorFile(string file_name, int size, int *v){
-    ofstream out(file_name);
-
-    for(int i = 0; i < size; i++ )
-    {
-        out << v[i];
-        out << ";";
-    }
-
-    out.close();
-}
-
-void WriteVetorFileResult(string file_name, string *info, int size){
-    ofstream ate(file_name);
-    for(int i = 0; i < size; i++)
-    {
-        ate << info[i]+"\n";
-    }
-    ate.close();
-}
-
-void readVectorFile(string nome, int size, int *v)
-{
-    ifstream arquivo;
-    string line;
-    arquivo.open(nome);
-    int i = 0;
-    if(arquivo.is_open())
-    {
-        while(arquivo.good())
-        {
-            getline(arquivo,line,';');
-            if (i < size){
-                v[i] = stoi(line);
-                i++;
-            }
-        }
-    }
-
-}
-
-void PrintVector(int *v, int n){
-    for(int i = 0; i < n; i++)
-    {
-        cout << v[i] << " - ";
-    }
-}
-//---------------------------Funçoes auxiliares---------------------------
 
 //---------------------------Funçoes de ordenação---------------------------
 void swap(int* a, int* b)
@@ -205,7 +129,7 @@ void MergeSort(int *V, int Pi, int Pf)
     }
 }
 
-void BlublleSort(int *v, int n)
+void BubbleSort(int *v, int n)
 {
     int aux;
     for(int i=(n-1); i > 0; i--)
@@ -295,9 +219,9 @@ void CountingSort_start(int *vet, int N)
 //---------------------------Funçoes de ordenação---------------------------
 
 //---------------------------Geração de dados---------------------------
-void GerarDados()
+void gereDados()
 {
-
+    UtilidadesArquivo *util = new UtilidadesArquivo();
     cout << endl << "...........Gerando Banco para teste..........." << endl;
 
     cout << endl << "...........VALORES RANDO..........." << endl;
@@ -311,20 +235,21 @@ void GerarDados()
     int *vet_rando_1000000 = new int [1000000];
 
     // GERACAO DE VALORES PARA OS VETORES
-    SireVectorRoadom(vet_rando_10,10);
-    SireVectorRoadom(vet_rando_100,100);
-    SireVectorRoadom(vet_rando_1000,1000);
-    SireVectorRoadom(vet_rando_10000,10000);
-    SireVectorRoadom(vet_rando_100000,100000);
-    SireVectorRoadom(vet_rando_1000000,1000000);
+
+    util->SireVectorRoadom(vet_rando_10,10);
+    util->SireVectorRoadom(vet_rando_100,100);
+    util->SireVectorRoadom(vet_rando_1000,1000);
+    util->SireVectorRoadom(vet_rando_10000,10000);
+    util->SireVectorRoadom(vet_rando_100000,100000);
+    util->SireVectorRoadom(vet_rando_1000000,1000000);
 
     // SALVA OS VETORES EM TXT PARA EFETUAR OS TESTE COM A MESMA BASE DE DADOS
-    WriteVetorFile("vet_randon_10.txt",  10, vet_rando_10);
-    WriteVetorFile("vet_randon_100.txt",  100, vet_rando_100);
-    WriteVetorFile("vet_randon_1000.txt",  1000, vet_rando_1000);
-    WriteVetorFile("vet_randon_10000.txt",  10000, vet_rando_10000);
-    WriteVetorFile("vet_randon_100000.txt",  100000, vet_rando_100000);
-    WriteVetorFile("vet_randon_1000000.txt",  1000000, vet_rando_1000000);
+    util->WriteVetorFile("vet_randon_10.txt",  10, vet_rando_10);
+    util->WriteVetorFile("vet_randon_100.txt",  100, vet_rando_100);
+    util->WriteVetorFile("vet_randon_1000.txt",  1000, vet_rando_1000);
+    util->WriteVetorFile("vet_randon_10000.txt",  10000, vet_rando_10000);
+    util->WriteVetorFile("vet_randon_100000.txt",  100000, vet_rando_100000);
+    util->WriteVetorFile("vet_randon_1000000.txt",  1000000, vet_rando_1000000);
 
 
     delete [] vet_rando_10;
@@ -346,20 +271,20 @@ void GerarDados()
 
 
     // GERACAO DE VALORES PARA OS VETORES
-    SireVectorDesc(vet_desc_10,10);
-    SireVectorDesc(vet_desc_100,100);
-    SireVectorDesc(vet_desc_1000,1000);
-    SireVectorDesc(vet_desc_10000,10000);
-    SireVectorDesc(vet_desc_100000,100000);
-    SireVectorDesc(vet_desc_1000000,1000000);
+    util->SireVectorDesc(vet_desc_10,10);
+    util->SireVectorDesc(vet_desc_100,100);
+    util->SireVectorDesc(vet_desc_1000,1000);
+    util->SireVectorDesc(vet_desc_10000,10000);
+    util->SireVectorDesc(vet_desc_100000,100000);
+    util->SireVectorDesc(vet_desc_1000000,1000000);
 
     // SALVA OS VETORES EM TXT PARA EFETUAR OS TESTE COM A MESMA BASE DE DADOS
-    WriteVetorFile("vet_desc_10.txt",  10, vet_desc_10);
-    WriteVetorFile("vet_desc_100.txt",  100, vet_desc_100);
-    WriteVetorFile("vet_desc_1000.txt",  1000, vet_desc_1000);
-    WriteVetorFile("vet_desc_10000.txt",  10000, vet_desc_10000);
-    WriteVetorFile("vet_desc_100000.txt",  100000, vet_desc_100000);
-    WriteVetorFile("vet_desc_1000000.txt",  1000000, vet_desc_1000000);
+    util->WriteVetorFile("vet_desc_10.txt",  10, vet_desc_10);
+    util->WriteVetorFile("vet_desc_100.txt",  100, vet_desc_100);
+    util->WriteVetorFile("vet_desc_1000.txt",  1000, vet_desc_1000);
+    util->WriteVetorFile("vet_desc_10000.txt",  10000, vet_desc_10000);
+    util->WriteVetorFile("vet_desc_100000.txt",  100000, vet_desc_100000);
+    util->WriteVetorFile("vet_desc_1000000.txt",  1000000, vet_desc_1000000);
 
     delete [] vet_desc_10;
     delete [] vet_desc_100;
@@ -380,20 +305,20 @@ void GerarDados()
     int *vet_asc_1000000 = new int [1000000];
 
     // GERACAO DE VALORES PARA OS VETORES
-    SireVectorAsc(vet_asc_10,10);
-    SireVectorAsc(vet_asc_100,100);
-    SireVectorAsc(vet_asc_1000,1000);
-    SireVectorAsc(vet_asc_10000,10000);
-    SireVectorAsc(vet_asc_100000,100000);
-    SireVectorAsc(vet_asc_1000000,1000000);
+    util->SireVectorAsc(vet_asc_10,10);
+    util->SireVectorAsc(vet_asc_100,100);
+    util->SireVectorAsc(vet_asc_1000,1000);
+    util->SireVectorAsc(vet_asc_10000,10000);
+    util->SireVectorAsc(vet_asc_100000,100000);
+    util->SireVectorAsc(vet_asc_1000000,1000000);
 
     // SALVA OS VETORES EM TXT PARA EFETUAR OS TESTE COM A MESMA BASE DE DADOS
-    WriteVetorFile("vet_asc_10.txt",  10, vet_asc_10);
-    WriteVetorFile("vet_asc_100.txt",  100, vet_asc_100);
-    WriteVetorFile("vet_asc_1000.txt",  1000, vet_asc_1000);
-    WriteVetorFile("vet_asc_10000.txt",  10000, vet_asc_10000);
-    WriteVetorFile("vet_asc_100000.txt",  100000, vet_asc_100000);
-    WriteVetorFile("vet_asc_1000000.txt",  1000000, vet_asc_1000000);
+    util->WriteVetorFile("vet_asc_10.txt",  10, vet_asc_10);
+    util->WriteVetorFile("vet_asc_100.txt",  100, vet_asc_100);
+    util->WriteVetorFile("vet_asc_1000.txt",  1000, vet_asc_1000);
+    util->WriteVetorFile("vet_asc_10000.txt",  10000, vet_asc_10000);
+    util->WriteVetorFile("vet_asc_100000.txt",  100000, vet_asc_100000);
+    util->WriteVetorFile("vet_asc_1000000.txt",  1000000, vet_asc_1000000);
 
     delete [] vet_asc_10;
     delete [] vet_asc_100;
@@ -418,7 +343,7 @@ enum string_code {
 enum string_code_func {
     insertSort,
     selectSort,
-    blublleSort,
+    bubbleSort,
     mergeSort,
     quickSort,
     heapSort,
@@ -434,7 +359,7 @@ string_code hashit (string const& inString) {
 string_code_func hashit_func (string const& inString) {
     if (inString == "insertSort") return insertSort;
     if (inString == "selectSort") return selectSort;
-    if (inString == "blublleSort") return blublleSort;
+    if (inString == "bubbleSort") return bubbleSort;
     if (inString == "mergeSort") return mergeSort;
     if (inString == "quickSort") return quickSort;
     if (inString == "heapSort") return heapSort;
@@ -443,6 +368,7 @@ string_code_func hashit_func (string const& inString) {
 
 string TestTime(string name_function, string amostra)
 {
+    UtilidadesArquivo *util = new UtilidadesArquivo();
 
     int vet_10[10];
     int vet_100[100];
@@ -454,29 +380,29 @@ string TestTime(string name_function, string amostra)
     switch(hashit(amostra)) {
         case desc:
 
-            readVectorFile("vet_desc_10.txt", 10, vet_10);
-            readVectorFile("vet_desc_100.txt", 100, vet_100);
-            readVectorFile("vet_desc_1000.txt", 1000, vet_1000);
-            readVectorFile("vet_desc_10000.txt", 10000, vet_10000);
-            readVectorFile("vet_desc_100000.txt", 100000, vet_100000);
-            readVectorFile("vet_desc_1000000.txt", 1000000, vet_1000000);
+            util->readVectorFile("vet_desc_10.txt", 10, vet_10);
+            util->readVectorFile("vet_desc_100.txt", 100, vet_100);
+            util->readVectorFile("vet_desc_1000.txt", 1000, vet_1000);
+            util->readVectorFile("vet_desc_10000.txt", 10000, vet_10000);
+            util->readVectorFile("vet_desc_100000.txt", 100000, vet_100000);
+            util->readVectorFile("vet_desc_1000000.txt", 1000000, vet_1000000);
 
             break;
         case asc:
-            readVectorFile("vet_asc_10.txt", 10, vet_10);
-            readVectorFile("vet_asc_100.txt", 100, vet_100);
-            readVectorFile("vet_asc_1000.txt", 1000, vet_1000);
-            readVectorFile("vet_asc_10000.txt", 10000, vet_10000);
-            readVectorFile("vet_asc_100000.txt", 100000, vet_100000);
-            readVectorFile("vet_asc_1000000.txt", 1000000, vet_1000000);
+            util->readVectorFile("vet_asc_10.txt", 10, vet_10);
+            util->readVectorFile("vet_asc_100.txt", 100, vet_100);
+            util->readVectorFile("vet_asc_1000.txt", 1000, vet_1000);
+            util->readVectorFile("vet_asc_10000.txt", 10000, vet_10000);
+            util->readVectorFile("vet_asc_100000.txt", 100000, vet_100000);
+            util->readVectorFile("vet_asc_1000000.txt", 1000000, vet_1000000);
             break;
         case randon:
-            readVectorFile("vet_randon_10.txt", 10, vet_10);
-            readVectorFile("vet_randon_100.txt", 100, vet_100);
-            readVectorFile("vet_randon_1000.txt", 1000, vet_1000);
-            readVectorFile("vet_randon_10000.txt", 10000, vet_10000);
-            readVectorFile("vet_randon_100000.txt", 100000, vet_100000);
-            readVectorFile("vet_randon_1000000.txt", 1000000, vet_1000000);
+            util->readVectorFile("vet_randon_10.txt", 10, vet_10);
+            util->readVectorFile("vet_randon_100.txt", 100, vet_100);
+            util->readVectorFile("vet_randon_1000.txt", 1000, vet_1000);
+            util->readVectorFile("vet_randon_10000.txt", 10000, vet_10000);
+            util->readVectorFile("vet_randon_100000.txt", 100000, vet_100000);
+            util->readVectorFile("vet_randon_1000000.txt", 1000000, vet_1000000);
             break;
 
     }
@@ -568,40 +494,40 @@ string TestTime(string name_function, string amostra)
             time_6 = (end - start)/1000000.0;
 
             break;
-        case blublleSort:
-            cout << "blublleSort Testando para base 10........" << endl;
+        case bubbleSort:
+            cout << "bubbleSort Testando para base 10........" << endl;
             start = clock();
-            BlublleSort(vet_10,10);
+            BubbleSort(vet_10, 10);
             end = clock();
             time_1 = (end - start)/1000000.0;
 
-            cout << "blublleSort Testando para base 100........" << endl;
+            cout << "bubbleSort Testando para base 100........" << endl;
             start = clock();
-            BlublleSort(vet_100,100);
+            BubbleSort(vet_100, 100);
             end = clock();
             time_2 = (end - start)/1000000.0;
 
-            cout << "blublleSort Testando para base 1000........" << endl;
+            cout << "bubbleSort Testando para base 1000........" << endl;
             start = clock();
-            BlublleSort(vet_1000,1000);
+            BubbleSort(vet_1000, 1000);
             end = clock();
             time_3 = (end - start)/1000000.0;
 
-            cout << "blublleSort Testando para base 10000........" << endl;
+            cout << "bubbleSort Testando para base 10000........" << endl;
             start = clock();
-            BlublleSort(vet_10000,10000);
+            BubbleSort(vet_10000, 10000);
             end = clock();
             time_4 = (end - start)/1000000.0;
 
-            cout << "blublleSort Testando para base 100000........" << endl;
+            cout << "bubbleSort Testando para base 100000........" << endl;
             start = clock();
-            BlublleSort(vet_100000,100000);
+            BubbleSort(vet_100000, 100000);
             end = clock();
             time_5 = (end - start)/1000000.0;
 
-            cout << "blublleSort Testando para base 1000000........" << endl;
+            cout << "bubbleSort Testando para base 1000000........" << endl;
             start = clock();
-            BlublleSort(vet_1000000,1000000);
+            BubbleSort(vet_1000000, 1000000);
             end = clock();
             time_6 = (end - start)/1000000.0;
 
@@ -638,11 +564,11 @@ string TestTime(string name_function, string amostra)
             end = clock();
             time_5 = (end - start)/1000000.0;
 
-            cout << "mergeSort Testando para base 1000000........" << endl;
+            /*cout << "mergeSort Testando para base 1000000........" << endl;
             start = clock();
             MergeSort(vet_1000000,0,1000000-1);
             end = clock();
-            time_6 = (end - start)/1000000.0;
+            time_6 = (end - start)/1000000.0;*/
 
             //            feito
             break;
@@ -677,11 +603,11 @@ string TestTime(string name_function, string amostra)
             end = clock();
             time_5 = (end - start)/1000000.0;
 
-            cout << "quickSort Testando para base 1000000........" << endl;
+            /*cout << "quickSort Testando para base 1000000........" << endl;
             start = clock();
             QuickSort(vet_1000000,0,1000000-1);
             end = clock();
-            time_6 = (end - start)/1000000.0;
+            time_6 = (end - start)/1000000.0;*/
 
 //            feito
 
@@ -770,12 +696,14 @@ string TestTime(string name_function, string amostra)
 
 
 int main() {
+    UtilidadesArquivo *util = new UtilidadesArquivo();
+
     cout << endl << endl << "---------------------------Teste de Orenação---------------------------" << endl << endl;
 
     string result[28];
     result[0] = "Nome Funcao;T:10;T:100;T:1000;T:10000;T:100000;T:1000000";
 
-    GerarDados();
+    gereDados();
 
     /*cout << endl << endl << "------------Testando insertSort para desc ------------" << endl << endl;
     result[1] = TestTime("insertSort", "desc");
@@ -800,14 +728,14 @@ int main() {
 
 result[8] = "---------;---------;---------;---------;---------";
 
-    cout << endl << endl << "------------Testando blublleSort para desc ------------" << endl << endl;
-    result[9] = TestTime("blublleSort", "desc");
+    cout << endl << endl << "------------Testando bubbleSort para desc ------------" << endl << endl;
+    result[9] = TestTime("bubbleSort", "desc");
 
-    cout << endl << endl << "------------Testando blublleSort para asc ------------" << endl << endl;
-    result[10] = TestTime("blublleSort", "asc");
+    cout << endl << endl << "------------Testando bubbleSort para asc ------------" << endl << endl;
+    result[10] = TestTime("bubbleSort", "asc");
 
-    cout << endl << endl << "------------Testando blublleSort para randon ------------" << endl << endl;
-    result[11] = TestTime("blublleSort", "randon");
+    cout << endl << endl << "------------Testando bubbleSort para randon ------------" << endl << endl;
+    result[11] = TestTime("bubbleSort", "randon");
 
 result[12] = "---------;---------;---------;---------;---------";
 
@@ -829,14 +757,14 @@ result[12] = "---------;---------;---------;---------;---------";
 
     result[20] = "---------;---------;---------;---------;---------";
 
-    cout << endl << endl << "------------Testando HeapSort para desc ------------" << endl << endl;
+    /*cout << endl << endl << "------------Testando HeapSort para desc ------------" << endl << endl;
     result[21] = TestTime("heapSort", "desc");
     cout << endl << endl << "------------Testando HeapSort para asc ------------" << endl << endl;
     result[22] = TestTime("heapSort", "asc");
     cout << endl << endl << "------------Testando HeapSort para randon ------------" << endl << endl;
     result[23] = TestTime("heapSort", "randon");
 
-    result[24] = "---------;---------;---------;---------;---------";
+    result[24] = "---------;---------;---------;---------;---------";*/
 
 //    cout << endl << endl << "------------Testando countingSort_start para desc ------------" << endl << endl;
 //    result[25] = TestTime("countingSort_start", "desc");
@@ -847,7 +775,7 @@ result[12] = "---------;---------;---------;---------;---------";
 //    result[27] = "countingSort_start-randon;-------;-------;-------;-------";
 //
     cout << endl << endl << "------------Salvando os Resultado no Arquivo------------" << endl << endl;
-    WriteVetorFileResult("Resultado_teste.csv", result, 28);
+    util->WriteVetorFileResult("Resultado_teste.csv", result, 28);
 
     cout << endl << endl << "---------------------------Teste de Orenação---------------------------" << endl << endl;
     return 0;

@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed2_ordenacao.dir/build.make CMakeFiles/ed2_ordenacao.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+util/UtilidadesArquivo.o: util/UtilidadesArquivo.cpp.o
+.PHONY : util/UtilidadesArquivo.o
+
+# target to build an object file
+util/UtilidadesArquivo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed2_ordenacao.dir/build.make CMakeFiles/ed2_ordenacao.dir/util/UtilidadesArquivo.cpp.o
+.PHONY : util/UtilidadesArquivo.cpp.o
+
+util/UtilidadesArquivo.i: util/UtilidadesArquivo.cpp.i
+.PHONY : util/UtilidadesArquivo.i
+
+# target to preprocess a source file
+util/UtilidadesArquivo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed2_ordenacao.dir/build.make CMakeFiles/ed2_ordenacao.dir/util/UtilidadesArquivo.cpp.i
+.PHONY : util/UtilidadesArquivo.cpp.i
+
+util/UtilidadesArquivo.s: util/UtilidadesArquivo.cpp.s
+.PHONY : util/UtilidadesArquivo.s
+
+# target to generate assembly for a file
+util/UtilidadesArquivo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed2_ordenacao.dir/build.make CMakeFiles/ed2_ordenacao.dir/util/UtilidadesArquivo.cpp.s
+.PHONY : util/UtilidadesArquivo.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... util/UtilidadesArquivo.o"
+	@echo "... util/UtilidadesArquivo.i"
+	@echo "... util/UtilidadesArquivo.s"
 .PHONY : help
 
 

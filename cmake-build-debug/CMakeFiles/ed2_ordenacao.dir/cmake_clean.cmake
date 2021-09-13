@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ed2_ordenacao.dir/main.cpp.o"
+  "CMakeFiles/ed2_ordenacao.dir/util/UtilidadesArquivo.cpp.o"
   "ed2_ordenacao"
   "ed2_ordenacao.pdb"
 )

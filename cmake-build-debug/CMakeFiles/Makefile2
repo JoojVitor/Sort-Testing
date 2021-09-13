@@ -81,12 +81,12 @@ clean: CMakeFiles/ed2_ordenacao.dir/clean
 CMakeFiles/ed2_ordenacao.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed2_ordenacao.dir/build.make CMakeFiles/ed2_ordenacao.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ed2_ordenacao.dir/build.make CMakeFiles/ed2_ordenacao.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ed2_ordenacao"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target ed2_ordenacao"
 .PHONY : CMakeFiles/ed2_ordenacao.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ed2_ordenacao.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ed2_ordenacao.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ed2_ordenacao.dir/rule

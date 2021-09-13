@@ -11,12 +11,10 @@ iostream
 -
 string
 -
-random
--
-fstream
--
 time.h
 -
-iomanip
--
+util/UtilidadesArquivo.h
+/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/util/UtilidadesArquivo.h
+
+/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/util/UtilidadesArquivo.h
 

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/main.cpp" "/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles/ed2_ordenacao.dir/main.cpp.o"
+  "/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/util/UtilidadesArquivo.cpp" "/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/cmake-build-debug/CMakeFiles/ed2_ordenacao.dir/util/UtilidadesArquivo.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

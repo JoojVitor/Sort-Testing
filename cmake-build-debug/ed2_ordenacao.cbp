@@ -87,6 +87,12 @@
 		<Unit filename="/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/main.cpp">
 			<Option target="ed2_ordenacao"/>
 		</Unit>
+		<Unit filename="/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/util/UtilidadesArquivo.cpp">
+			<Option target="ed2_ordenacao"/>
+		</Unit>
+		<Unit filename="/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/util/UtilidadesArquivo.h">
+			<Option target="ed2_ordenacao"/>
+		</Unit>
 		<Unit filename="/home/demo/Desktop/ed2_ordenacao/ed2_ordenacao/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
