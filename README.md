@@ -1,4 +1,11 @@
 # Teste de tempo de execução em algoritmos de ordenação
+
+Integrantes:
+- João Vitor dos Santos Couto
+- Norton Pereira Ricardo
+- Gabriel de Castro Gonçalves
+- Wellington Soares de Morais
+
 Este trabalho visa analisar o tempo de execução de cada método de ordenação, considerando o melhor e pior caso e um caso aleatório.
 
 ## Algoritmos
