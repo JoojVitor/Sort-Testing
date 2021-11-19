@@ -1,12 +1,12 @@
-# Teste de tempo de execução em algoritmos de ordenação
+# Runtime testing on sorting algorithms
 
-Integrantes:
+Members:
 - João Vitor dos Santos Couto
 - Norton Pereira Ricardo
 - Gabriel de Castro Gonçalves
 - Wellington Soares de Morais
 
-Este trabalho visa analisar o tempo de execução de cada método de ordenação, considerando o melhor e pior caso e um caso aleatório.
+This work aims to analyze the execution time of each sorting method, considering the best and worst case and a random case.
 
 ## Algoritmos
 - InsertSort
@@ -17,27 +17,27 @@ Este trabalho visa analisar o tempo de execução de cada método de ordenação
 - HeapSort
 - CountingSort
 
-## Execução 
-Inicialmente são gerados vetores de capacidades 10, 100, 1000, 10000, 100000, 1000000 com valores aleatórios. Cada método de ordenação contempla o melhor caso, o pior caso e o caso aleatório, medindo o tempo de execução em milissegundo.
+## Execution 
+Initially, vectors of capacities 10, 100, 1000, 10000, 100000, 1000000 with random values are generated. Each ordering method contemplates the best case, the worst case and the random case, measuring the execution time in milliseconds.
 
-    Obs.: O tempo para execução é bastante demorado!
+    Ps.: Execution time is very long!
 
-## Resultado
-No final da execução é gerado um arquivo .csv com a relação do tempo de cada método de ordenação, o caso e a quantidade de valores.
+## Result
+At the end of the execution, a .csv file is generated with the relation of the time of each sorting method, the case and the number of values.
 
-A tabela a seguir apresenta os resultados obtidos em nossos testes:
+The table below shows the results obtained in our tests:
 
 <table>
     <thead>
         <tr>
-            <th>Método</th>
-            <th>Caso</th>
-            <th>10 elementos</th>
-            <th>100 elementos</th>
-            <th>1K elementos</th>
-            <th>10K elementos</th>
-            <th>100K elementos</th>
-            <th>1Mi elementos</th>
+            <th>Method</th>
+            <th>Case</th>
+            <th>10 elements</th>
+            <th>100 elements</th>
+            <th>1K elements</th>
+            <th>10K elements</th>
+            <th>100K elements</th>
+            <th>1Mi elements</th>
         </tr>
     </thead>
     <tbody>
@@ -212,12 +212,12 @@ A tabela a seguir apresenta os resultados obtidos em nossos testes:
     </tbody>
 </table>
 
-    Obs.: O tempo das operações foram medidos em segundos.
+    Ps.: The times of operations were measured in seconds.
 
-## Especificação da maquina de testes
-Neste projeto foi usada uma maquina virtual hospedada no serviço Google Cloud com as seguintes configurações:
+## Test machine specification
+In this project, a virtual machine hosted on the Google Cloud service was used with the following settings:
 
-    Processador: 4 vCPUs Intel(R) Xeon(R) CPU @ 2.20GHz
-    Memória: 32GB
-    SO: Ubuntu #56~18.04.1 x86_64, GNU/Linux
-    Disco: 50GB
+    Processor: 4 vCPUs Intel(R) Xeon(R) CPU @ 2.20GHz
+    Memory: 32GB
+    OS: Ubuntu #56~18.04.1 x86_64, GNU/Linux
+    Hard disk: 50GB
